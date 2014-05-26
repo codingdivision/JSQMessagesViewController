@@ -41,7 +41,7 @@
  *
  *  @return An initialized string describing the sender. You must not return `nil` from this method.
  */
-- (NSString *)sender;
+- (NSString *)senderAtIndexPath:(NSIndexPath *)indexPath;
 
 /**
  *  Asks the data source for the message data that corresponds to the specified item at indexPath in the collectionView.

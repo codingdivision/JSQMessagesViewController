@@ -371,7 +371,7 @@ static void * kJSQMessagesKeyValueObservingContext = &kJSQMessagesKeyValueObserv
     NSString *messageSender = [messageData sender];
     NSParameterAssert(messageSender != nil);
     
-    BOOL isOutgoingMessage = [messageSender isEqualToString:self.sender];
+    BOOL isOutgoingMessage = [messageSender isEqualToString:[self.collectionView.dataSource senderAtIndexPath:indexPath]];
     
     NSString *cellIdentifier = isOutgoingMessage ? self.outgoingCellIdentifier : self.incomingCellIdentifier;
     JSQMessagesCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
