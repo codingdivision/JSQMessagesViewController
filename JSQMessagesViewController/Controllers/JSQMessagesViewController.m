@@ -268,6 +268,10 @@ static void * kJSQMessagesKeyValueObservingContext = &kJSQMessagesKeyValueObserv
 
 #pragma mark - Messages view controller
 
+- (NSString *)senderAtIndexPath:(NSIndexPath *)indexPath {
+    return self.sender;
+}
+
 - (void)didPressSendButton:(UIButton *)button
            withMessageText:(NSString *)text
                     sender:(NSString *)sender
